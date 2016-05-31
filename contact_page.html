@@ -55,6 +55,9 @@
 			  <li id="resource_page_tab" class="">
 				  <a href="resource_page.html">Resources</a>
 			  </li>
+			  <li id="best_practice_page_tab" class="">
+				  <a href="best_practice_page.html">Best Practices</a>
+			  </li>
 			  <li id="contact_page_tab" class="">
 				  <a href="contact_page.html">Contact</a>
 			  </li>
@@ -68,52 +71,66 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="well">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="well">
 
-<h3>Please fill out and submit this form and we will contact you immediately. </h3>
+    <div id="id_thank_you" style="display:none;">
+      <h3>Thank you, somone will contact you soon.</h3>
+    </div>
 
-<form action="contact_page.html">
-<table class="table">
-<tr><td>First name:</td> <td>  <input type="text" name=""> </td></tr>
-<tr><td>Last name: </td> <td>  <input type="text" name="">  </td></tr>
-<tr><td>Email: </td> <td>  <input type="text" name="">  </td></tr>
-<tr><td>Phone number: </td> <td>  <input type="text" name="">  </td></tr>
-<tr><td>Commends or Questions: </td> <td> 
-    <textarea rows="3" columns="30"></textarea></td></tr>
-<tr><td></td> <td> <input type="submit" value="Submit"> </td></tr>
-</table>
-</form>
+    <div id="id_contact_form" style="display:block;">
+      <h3>Please fill out and submit this form and we will contact you immediately. </h3>
+        <table class="table">
+          <tr><td>First name:</td> <td>  <input type="text" name=""> </td></tr>
+          <tr><td>Last name: </td> <td>  <input type="text" name="">  </td></tr>
+          <tr><td>Email: </td> <td>  <input type="text" name="">  </td></tr>
+          <tr><td>Phone number: </td> <td>  <input type="text" name="">  </td></tr>
+          <tr><td>Comments or Questions: </td> <td> 
+              <textarea rows="3" columns="30"></textarea></td></tr>
+          <tr><td></td> <td>  <button id="submit_form_button">Submit</button> 
+          <!--input type="submit" value="Submit"--> </td></tr>
+        </table>
+    </div>
 
-<p>
-Or you can contact us directly at <a href="mailto:gvr@pdx.edu">gvr@pdx.edu<a>
-</p>
-
-</div></div>
-</div></div>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <p class="text-muted">
-    	Saulutions 2016 | 
-    	<a href="home_page.html">Home</a> | 
-        <a href="information_page.html">Information</a> |
-        <a href="resource_page.html">Resource</a> |
-    	<a href="contact_page.html">Contact</a> 
-    </p>
+      </div>
+    </div>
   </div>
-</footer>
-
-
+</div>
+</center>
+<!-- FOOTER -->
+<center>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">
+        Saulutions 2016 | 
+        <a href="home_page.html">Home</a> | 
+        <a href="information_page.html">Information</a> |
+        <a href="resource_page.html">Resources</a> |
+        <a href="best_practice_page.html">Best Practices</a> | 
+        <a href="contact_page.html">Contact</a> 
+      </p>
+    </div>
+  </footer>
 </center>
 
-</body>
 <script>
-document.getElementById("home_page_tab").className = "";
-document.getElementById("contact_page_tab").className = "active";
-document.getElementById("resource_page_tab").className = "";
-document.getElementById("information_page_tab").className = "";
+  document.getElementById("submit_form_button").onclick = function() { hide_form() };
+
+  function hide_form() {
+    document.getElementById("id_contact_form").style.display="none";
+    document.getElementById("id_thank_you").style.display="block";
+  }
 </script>
+
+<script>
+  document.getElementById("home_page_tab").className = "";
+  document.getElementById("contact_page_tab").className = "active";
+  document.getElementById("resource_page_tab").className = "";
+  document.getElementById("information_page_tab").className = "";
+  document.getElementById("best_practice_page_tab").className = "";
+</script>
+
+
+</body>
 </HTML>
