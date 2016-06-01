@@ -24,49 +24,14 @@
 
 <title>Help Abolish Sex Trafficed Youth (HASTY)</title>
 
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
 </head>
 
 <body>
 
 
+<div id="headerDiv"></div>
 
-<nav class="navbar navbar-inverse" role="navigation" >
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" 
-			 data-toggle="collapse" data-target="#navbarCollapse" 
-			 aria-expanded="false">
-			 	<span class="sr-only">Toggle navigation</span>
-			 	<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="home_page.html">
-			HASTY  |  Help Abolish Sex Trafficed Youth 
-            </a>
-		</div><!--navbar-header -->
-
-		<div class="collapse navbar-collapse" id="navbarCollapse">
-		  <ul class="nav navbar-nav navbar-right" id="navbar">
-			  <li id="home_page_tab" class="">  <!-- class="active" --> 
-				  <a href="home_page.html">Home</a>
-			  </li>
-			  <li id="information_page_tab" class="">
-				  <a href="information_page.html">Info</a>
-			  </li>
-			  <li id="resource_page_tab" class="">
-				  <a href="resource_page.html">Resources</a>
-			  </li>
-			  <li id="best_practice_page_tab" class="">
-				  <a href="best_practice_page.html">Best Practices</a>
-			  </li>
-			  <li id="contact_page_tab" class="">
-				  <a href="contact_page.html">Contact</a>
-			  </li>
-		  	</ul>
-		  </div><!--collapse navbar-collapse -->
-		</div><!--navbar header -->
-</nav><!--navbar default -->
 
 
 <div class="container">
@@ -81,17 +46,6 @@
             </a>
         </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 Human sex trafficking is a modern-day form of slavery that involves the 
@@ -143,37 +97,28 @@ men and women recruiting youth.
 
 
 
-
-
-
-<center>
-<footer class="footer">
-  <div class="container">
-    <p class="text-muted">
-    	Saulutions 2016 | 
-    	<a href="home_page.html">Home</a> | 
-      <a href="information_page.html">Information</a> |
-      <a href="resource_page.html">Resources</a> |
-    	<a href="best_practice_page.html">Best Practices</a>  |
-    	<a href="contact_page.html">Contact</a> 
-    </p>
-  </div>
-</footer>
-</center>
-
-
-
-
-</body>
-
+<div id="footerDiv"></div>
+<script>
+  $(function(){
+    $("#footerDiv").load("footer.html");
+  })
+  $(function(){
+    $("#headerDiv").load("header.html", function() {set_tab()} );
+  })
+</script>
 
 <script>
-document.getElementById("home_page_tab").className = "active";
-document.getElementById("contact_page_tab").className = "";
-document.getElementById("resource_page_tab").className = "";
-document.getElementById("information_page_tab").className = "";
-document.getElementById("best_practice_page_tab").className = "";
+function set_tab(){
+  document.getElementById("home_page_tab").className = "active";
+  document.getElementById("myths_page_tab").className = "";
+  document.getElementById("contact_page_tab").className = "";
+  document.getElementById("resource_page_tab").className = "";
+  document.getElementById("information_page_tab").className = "";
+  document.getElementById("best_practice_page_tab").className = "";
+}
 </script>
+</body>
+
 
 
 </HTML>
